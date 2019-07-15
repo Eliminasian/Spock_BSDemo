@@ -1,0 +1,212 @@
+﻿    < !--modal section-- >
+    < !--Modal 1-- >
+<div class="modal fade" id="modal-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <ul class="nav nav-tabs navbar">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab1" data-toggle="tab" href="#home">Math</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab2" data-toggle="tab" href="#menu2">Factorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab3" data-toggle="tab" href="#menu3">FizzBuzz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab4" data-toggle="tab" href="#menu4">Palindrome</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <!--Enter Data here for Simple Math coding-->
+                    <div id="home" class="tab-pane active">
+                        <br>
+                        <h6 class="text-center">Javascript Exercise 1: Simple Math</h6>
+                        <hr />
+                        <p class="text-center">Enter any five integers to run some basic math.</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="number1" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="min" class="text-center"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="number2" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="max" class="text-center"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="number3" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="mean" class="text-center"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="number4" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="sum" class="text-center"></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="number5" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="product" class="text-center"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <button id="btnMath" type="submit" class="btn btn-warning center-block btn-wide text-bold block">Let 'er rip!</button>
+                                <button id="btnMathCode" class="btn btn-light btn-outline-secondary center-block btn-wide text-bold block">Toggle Code</button>
+                                <button id="btnClear" class="btn btn-danger center-block btn-wide text-bold block">Do-over?</button>
+                            </div>
+                            <br />
+                        </div>
+                        <div class="container-fluid" id="divMath">
+                            <pre class="brush: js">
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <!--Enter Data here for Factorial coding-->
+                    <div id="menu2" class="tab-pane fade">
+                        <br>
+                        <h6 class="text-center">Javascript Exercise 2: Factorials</h6>
+                        <hr />
+                        <p class="text-center">Enter any integer under 171 to find its factorial.</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6" style="height: 80px">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input id="input6" placeholder="Enter an integer" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="height: 80px">
+                                    <p id="output2" class="text-center"></p>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <button id="btnFact" class="btn btn-warning center-block btn-wide text-bold block">Let 'er rip!</button>
+                                    <button id="btnFactCode" class="btn btn-light btn-outline-secondary center-block btn-wide text-bold block">Toggle Code</button>
+                                    <button id="btnClear2" class="btn btn-danger center-block btn-wide text-bold block">Do-over?</button>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="container-fluid" id="divFact">
+                                <pre class="brush: js">
+
+                                            }
+                                </pre>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+
+
+                    <!--Enter Data here for FizzBuzz coding-->
+                    <div id="menu3" class="tab-pane fade">
+                        <br>
+                        <h6 class="text-center">Javascript Exercise 3: Fizz Buzz</h6>
+                        <hr />
+                        <p class="text-center">Enter any two integers between 0 and 100.</p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="input7" placeholder="Enter an integer" />
+                                    <input id="input8" placeholder="Enter an integer" />
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="output3" class="text-center"></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <button id="btnFizz" class="btn btn-warning center-block btn-wide text-bold block">Let 'er rip!</button>
+                                    <button id="btnFizzCode" class="btn btn-light btn-outline-secondary center-block btn-wide text-bold block">Toggle Code</button>
+                                    <button id="btnClear3" class="btn btn-danger center-block btn-wide text-bold block">Do-over?</button>
+                                </div>
+                                <br />
+                            </div>
+                            <br />
+                            <div class="container-fluid" id="divFizz">
+                                <pre class="brush: js">
+
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Enter Data here for Palindrome coding-->
+                    <div id="menu4" class="tab-pane fade">
+                        <br>
+                        <h6 class="text-center">Javascript Exercise 4: Palindromes</h6>
+                        <hr />
+                        <p></p>
+                        <div class="container-fluid">
+                            <div class="col">
+                                <p class="text-center">
+                                    Enter a string to be reversed:
+                                </p>
+                                <div class="row">
+                                    <input id="input9" type="text" name="string" placeholder="Enter a string:" />
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <span>Results:</span>
+                                        <p id="output4" class="text-center"></p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <div class="row d-inline-block">
+                                            <p><b>Is it a palindrome?</b></p>
+                                        </div>
+                                        <div class="row" style="margin-top: -20px">
+                                            <input type="checkbox" id="IsPalindrome" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <button id="btnPal" class="btn btn-warning center-block btn-wide text-bold block">Let 'er rip!</button>
+                                        <button id="btnPalCode" class="btn btn-light btn-outline-secondary center-block btn-wide text-bold block">Toggle Code</button>
+                                        <button id="btnClear4" class="btn btn-danger center-block btn-wide text-bold block">Do-over?</button>
+                                    </div>
+                                    <br />
+                                </div>
+                                <br />
+                                <div class="container-fluid" id="divPal">
+                                    <pre class="brush: js">
+
+                                </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>

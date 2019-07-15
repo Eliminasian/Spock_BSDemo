@@ -1,0 +1,74 @@
+﻿<style>
+    .btn-puce {
+        background-color: rgb(80, 53, 60);
+        color: white;
+    }
+
+       </style>
+
+
+<h2>JS Demo</h2>
+
+<div class="row">
+    <div class="col-md-3">
+    Enter Number 1:
+    </div>
+    <div class="col-md-3">
+        <input type="number" id="input1" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+    Enter Number 2:
+    </div>
+    <div class="col-md-3">
+        <input type="number" id="input2" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <button id="btn1" class="btn btn-success">Click Me</button>
+    </div>
+</div>
+
+<hr />
+
+<div class="row text-center h3">
+    <div class="col-md-12">
+        Here are the results
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <p id="sum"></p>
+    </div>
+    <div class="col-md-6">
+        <p id="mult"></p>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        $("#btn1").click(function () {
+            //Step: 1 Get the user data
+            var num1 = Number($("#input1").val());
+            var num2 = Number($("#input2").val());
+            var num3 = Number($("#input3").val());
+            var num4 = Number($("#input4").val());
+            var num5 = Number($("#input5").val());
+
+            //Step 2: Do something with the data
+            var sum = num1 + num2;
+            var mult = num1 * num2;
+            var smallest = Math.min(num1, num2, num3, num4, num5);
+            //Step 3: Display results
+            $("#sum").text("The sum is: " + sum);
+            $("#mult").text("The product is: " + mult);
+        })
+
+    </script> 
+
+    }

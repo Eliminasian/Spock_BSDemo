@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "FizzBuzz";
+}
+
+<style>
+
+    .i {
+        color: palegreen;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .fizz{
+        color:red;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .buzz{
+        color: blue;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+    .fizzbuzz{
+        color: purple;
+        font-weight: bolder;
+        font-size: larger;
+    }
+
+</style>
+
+
+<h2>Fizz Buzz</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        Fizz Buzz Exercise
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-12">
+            <input id="fizzIn1" type="number" placeholder="Enter a number" />
+        </div>
+    </div>
+</div>
+<p></p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-12">
+            <input id="fizzIn2" type="number" placeholder="Enter a number" />
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="col">
+    <div class="row-md-6">
+        <div class="col-md-6">
+            <button id="fizzBtn" class="btn btn-success">Fizzle</button>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+            <button id="btnClr" class="btn btn-danger">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-6">
+            <p id="output1" class="text-center"></p>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    
+    <script>
+        //call
+        $("#fizzBtn").click(function () {
+            var num1 = +$("#fizzIn1").val();
+            var num2 = +$("#fizzIn2").val();
+            //run
+            for (var i = 1, array = [], fizz = 0, buzz = 0; i <= 100; i++) {
+                fizz = i % num1;
+                buzz = i % num2;
+                
+                if (!fizz && !buzz)
+                    array.push("<span class='fizzbuzz'>Fizz-Buzz</span");
+                else if (!fizz)
+                    array.push("<span class='fizz'>Fizz</span>");
+                else if (!buzz)
+                    array.push("<span class='buzz'>Buzz</span>");
+                else array.push(i);
+                
+            };
+            //result
+            $("#output1").html(array.join(', '));
+        });
+            //function
+        //function FizzBuzz(num1, num2, i) {
+            //if (i % num1 == 0 && i % num2 == 0) {
+                //return "FizzBuzz, "; 
+                //}
+            //else if (i % num1 == 0) {
+                //return "Fizz, ";
+            //}
+            //else if (i % num2 == 0) {
+                //return "Buzz, ";
+            //}
+            //else {
+                    //return i + ", ";
+                //}
+        //};
+
+    </script>
+            
+            
+            }
+
+
+
+
+
+
+
+

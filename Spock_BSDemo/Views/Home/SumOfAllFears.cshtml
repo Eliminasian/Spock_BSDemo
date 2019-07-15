@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "SumOfAllFears";
+}
+
+<h2>Sum Of All Fears</h2>
+
+<div class="row">
+    <div class="col-md-6 text-center h3">
+        The Sum Of All Fears Challenge
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8 h3">
+        <div class="row">
+            <input id="fear1" class="target" type="number" placeholder="Enter a number" />
+            <input id="fear2" class="target" type="number" placeholder="Enter a number" />
+            <input id="fear3" class="target" type="number" placeholder="Enter a number" />
+            <input id="fear4" class="target" type="number" placeholder="Enter a number" />
+            <input id="fear5" class="target" type="number" placeholder="Enter a number" />
+            <input id="fear6" class="target" type="number" placeholder="Enter a number" />
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-6 text-left h3">
+        Sum of all?
+        <input id="fear7" type="number" placeholder="Enter a number" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <btn id="sumAll" class="btn btn-success">Fear</btn>
+    </div>
+    <div class="col-md-3">
+        <btn id="btnToggle" class="btn btn-info">Show/Hide Code</btn>
+    </div>
+    <div class="col-md-3">
+        <btn id="btnClr" class="btn btn-danger">Clear</btn>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-6">
+            <p id="output1" class="text-center"></p>
+        </div>
+    </div>
+</div>
+
+
+<hr/>
+
+@section scripts{
+
+    
+    <script>
+
+        //Button
+        $("#sumAll").click(function () {
+            //Variables
+            var num1 = Number($("#fear1").val())
+            var num2 = Number($("#fear2").val())
+            var num3 = Number($("#fear3").val())
+            var num4 = Number($("#fear4").val())
+            var num5 = Number($("#fear5").val())
+            var num6 = Number($("#fear6").val())
+            var num7 = Number($("#fear7").val())
+            //Sum
+            var array = [num1, num2, num3, num4, num5, num6]
+            var sumTrue = false
+            //Sum Of All
+            for (i = 0; i < array.length - 1; i++) {
+                for (y = i + 1; y <= array.length - 1; y++) {
+                    if (array[i] + array[y] == num7) {
+                        sumTrue = true
+                        $("#output1").html("<b>" + num7 + "</b> was found by adding array members " + "<span class='target'>" + array[i] +
+                            " </span> and <span class='target'>" + array[y] + "</span>");
+                        break;
+                    }
+                }
+            }
+            if (sumTrue == false) {
+                $("#output1").html("K has <b> not </b> been found");
+        }
+
+
+
+        
+
+
+
+
+        });
+                  
+    </script>
+        
+    
+    
+    }
+
+
+
+
+

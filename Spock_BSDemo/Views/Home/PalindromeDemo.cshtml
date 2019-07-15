@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "PalindromeDemo";
+}
+
+<h2>Palindrome Demo</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        Palindrome Exercise
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-6">
+            <input id="palIn" type="text" placeholder="Enter a word" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row-md-6">
+        <p class="output" id="palOut"></p>
+        </div>
+    </div>
+</div>
+
+<div class="col">
+    <div class="row-md-6">
+        <div class="col-md-6">
+            <button id="btnPal" class="btn btn-danger">Reverse, reverse!</button>
+        </div>
+    </div>
+</div>    
+
+        @section scripts{
+
+        <script>
+            $("#btnPal").click(function () {
+                //Step 1: Get the word
+                var str = $("#palIn").val();
+                var reverse = "";
+                //Step 2: Reverse the word
+                //Use a decrementing "for" loop in conjunction
+                //substr command and the += operator to produce the reverse word.
+                if (str == "" || str.length == 0 || str == null) {
+                $("#palIn").val();
+                return;
+                //Box is empty
+                }
+
+                for (i = str.length - 1; i >= 0; i--) {
+                    reverse += str[i];
+                }
+
+                var message = "";
+                if (str == reverse) {
+                    message = "Your word \"" + str + "\" reversed = " + reverse + " therefore, " + str + " is a Palindrome";
+                }
+                else {
+                    message = "Your word \"" + str + "\" reversed = " + reverse + " therefore, " + str + " is not a Palindrome";
+                }
+
+
+                //Step 3: Inform the user
+                $("#palOut").text(message);
+  
+            });
+        </script>
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
